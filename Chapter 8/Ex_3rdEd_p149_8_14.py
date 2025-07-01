@@ -1,17 +1,16 @@
 def make_car(manufacturer, model, **options):
-    """Make a dictionary representing a car."""
-    car_dict = {
+    """Build a dictionary containing information about a car."""
+    my_car = {
         'manufacturer': manufacturer.title(),
         'model': model.title(),
         }
     for option, value in options.items():
-        car_dict[option] = value
+        my_car[option] = value
 
-    return car_dict
+    return my_car
 
-my_outback = make_car('subaru', 'outback', color='blue', tow_package=True)
-print(my_outback)
+my_volksie = make_car('volkswagen', 'golf', color='white', leather_seats=False)
+print(my_volksie)
 
-my_old_accord = make_car('honda', 'accord', year=1991, color='white',
-        headlights='popup')
-print(my_old_accord)
+my_merc = make_car('mercedes-benz', 'c-class', color='black', leather_seats=True)
+print(my_merc)

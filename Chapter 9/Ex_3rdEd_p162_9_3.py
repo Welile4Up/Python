@@ -1,29 +1,30 @@
 class User:
-    """Represent a simple user profile."""
+    """Demonstrating a user profile."""
 
-    def __init__(self, first_name, last_name, username, email, location):
-        """Initialize the user."""
+    def __init__(self, first_name, last_name, email_address, password, language):
+        """Initialize the user profile attributes."""
         self.first_name = first_name.title()
         self.last_name = last_name.title()
-        self.username = username
-        self.email = email
-        self.location = location.title()
+        self.email_address = email_address
+        self.password = password
+        self.language = language.title()
 
     def describe_user(self):
-        """Display a summary of the user's information."""
-        print(f"\n{self.first_name} {self.last_name}")
-        print(f"  Username: {self.username}")
-        print(f"  Email: {self.email}")
-        print(f"  Location: {self.location}")
+        """Present a summary of the user's information."""
+        print(f"\nFirst Name: {self.first_name}")
+        print(f"Last Name: {self.last_name}")
+        print(f"Email Address: {self.email_address}")
+        print(f"Password: {self.password}")
+        print(f"Language: {self.language}")
 
     def greet_user(self):
-        """Display a personalized greeting to the user."""
-        print(f"\nWelcome back, {self.username}!")
+        """Show a personalized greeting to the user."""
+        print(f"\nGood day, {self.first_name}!")
 
-eric = User('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska')
-eric.describe_user()
-eric.greet_user()
+john = User('john', 'moshoeu', 'shoes@hotmail.com', 'shoooz', 'sotho')
+john.describe_user()
+john.greet_user()
 
-willie = User('willie', 'burger', 'willieburger', 'wb@example.com', 'alaska')
-willie.describe_user()
-willie.greet_user()
+mary = User('mary', 'blige', 'mblige@gmail.com', 'walkandstumble', 'english')
+mary.describe_user()
+mary.greet_user()

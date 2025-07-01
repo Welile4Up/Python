@@ -1,4 +1,5 @@
-def make_album(artist, title, number_songs=0):
+# Function that takes in an artist name, album title and number of songs
+def make_album(artist, title, number_songs=None):
     """Build a dictionary describing a music album."""
     dictionary = {
         'artist': artist.title(),
@@ -8,6 +9,7 @@ def make_album(artist, title, number_songs=0):
         dictionary['number_songs'] = number_songs
     return dictionary
 
+# Call the function with 3 combinations of artist and title
 album = make_album('jock', 'blue')
 print(album)
 
@@ -17,5 +19,6 @@ print(album)
 album = make_album('seal', 'rose')
 print(album)
 
+# Call the function with a combination of artist, title and number of songs
 album = make_album('nas', 'stillmatic', number_songs=10)
 print(album)

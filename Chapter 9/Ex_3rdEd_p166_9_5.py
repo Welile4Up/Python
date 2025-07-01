@@ -1,25 +1,26 @@
 class User:
-    """Represent a simple user profile."""
+    """Demonstrating a user profile."""
 
-    def __init__(self, first_name, last_name, username, email, location):
-        """Initialize the user."""
+    def __init__(self, first_name, last_name, email_address, password, language, login_attempts):
+        """Initialize the user profile attributes."""
         self.first_name = first_name.title()
         self.last_name = last_name.title()
-        self.username = username
-        self.email = email
-        self.location = location.title()
-        self.login_attempts = 0
+        self.email_address = email_address
+        self.password = password
+        self.language = language.title()
+        self.login_attempts = login_attempts
 
     def describe_user(self):
-        """Display a summary of the user's information."""
-        print(f"\n{self.first_name} {self.last_name}")
-        print(f"  Username: {self.username}")
-        print(f"  Email: {self.email}")
-        print(f"  Location: {self.location}")
+        """Present a summary of the user's information."""
+        print(f"\nFirst Name: {self.first_name}")
+        print(f"Last Name: {self.last_name}")
+        print(f"Email Address: {self.email_address}")
+        print(f"Password: {self.password}")
+        print(f"Language: {self.language}")
 
     def greet_user(self):
-        """Display a personalized greeting to the user."""
-        print(f"\nWelcome back, {self.username}!")
+        """Show a personalized greeting to the user."""
+        print(f"\nGood day, {self.first_name}!")
 
     def increment_login_attempts(self):
         """Increment the value of login_attempts."""
@@ -29,16 +30,17 @@ class User:
         """Reset login_attempts to 0."""
         self.login_attempts = 0
 
-eric = User('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska')
-eric.describe_user()
-eric.greet_user()
+john = User('john', 'moshoeu', 'shoes@hotmail.com', 'shoooz', 'sotho', 0)
+john.describe_user()
+john.greet_user()
 
-print("\nMaking 3 login attempts...")
-eric.increment_login_attempts()
-eric.increment_login_attempts()
-eric.increment_login_attempts()
-print(f"  Login attempts: {eric.login_attempts}")
+print("\nMaking 4 login attempts...")
+john.increment_login_attempts()
+john.increment_login_attempts()
+john.increment_login_attempts()
+john.increment_login_attempts()
+print(f"Login attempts: {john.login_attempts}")
 
-print("Resetting login attempts...")
-eric.reset_login_attempts()
-print(f"  Login attempts: {eric.login_attempts}")
+print("\nResetting login attempts...")
+john.reset_login_attempts()
+print(f"Login attempts: {john.login_attempts}")

@@ -1,5 +1,5 @@
 def show_messages(messages):
-    """Print all messages in the list."""
+    """Print a list containing short text messages."""
     for message in messages:
         print(message)
 
